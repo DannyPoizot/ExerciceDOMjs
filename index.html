@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Exercices DOM</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h1>Exercice 1</h1>
+    <div id="output">
+      <p>Lien vers <a href="#">Youtube</a></p>
+    </div>
+    <h1>Exercice 2</h1>
+    <div id="output1">
+      <span id="mascot"></span>
+      <button type="button" name="button" onclick="paint()">Zozor</button>
+    </div>
+    <h1>Exercice 3</h1>
+    <div id="output2">
+        Nous aurons le destin que nous aurons mérité.<cite>Albert Einstein</cite>
+    </div>
+    <h1>Mini-TP</h1>
+    <div id="output3">
+
+    </div>
+    <script>
+    // Exercice 1
+      document.querySelector("a").href = "https://www.youtube.com/.";
+    // Exercice 2
+    function paint(){
+      document.getElementById("mascot").setAttribute("data-state", "paint");
+    }
+    // Exercice 3
+    let citation = document.getElementById("output2").innerHTML;
+    document.getElementById("output2").innerHTML = "<blockquote>" + citation + "</blockquote";
+    // Mini-TP
+    let Maindiv = document.createElement("div").setAttribute("divTP1","para");
+    let textNodes = [
+      document.createTextNode('Le '),
+          document.createTextNode('World Wide Web Consortium'),
+          document.createTextNode(', abrégé par le sigle '),
+          document.createTextNode('W3C'),
+          document.createTextNode(', est un '),
+          document.createTextNode('organisme de standardisation'),
+          document.createTextNode(' à but non-lucratif chargé de promouvoir la compatibilité des technologies du '),
+          document.createTextNode('World Wide Web'),
+          document.createTextNode('.')
+    ];
+    // document.getElementById('output3').appendChild(MainDiv);
+
+    </script>
+  </body>
+</html>
