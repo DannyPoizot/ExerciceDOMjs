@@ -33,8 +33,11 @@
     // Exercice 3
     let citation = document.getElementById("output2").innerHTML;
     document.getElementById("output2").innerHTML = "<blockquote>" + citation + "</blockquote";
+
+
     // Mini-TP
-    let Maindiv = document.createElement("div").setAttribute("divTP1","para");
+    let Maindiv = document.createElement("div");
+    console.log(Maindiv);
     let textNodes = [
       document.createTextNode('Le '),
           document.createTextNode('World Wide Web Consortium'),
@@ -46,7 +49,40 @@
           document.createTextNode('World Wide Web'),
           document.createTextNode('.')
     ];
-    // document.getElementById('output3').appendChild(MainDiv);
+    console.log(textNodes);
+    let strong = document.createElement("strong");
+    let strong2 = document.createElement("strong");
+
+    strong.appendChild(textNodes[1]);
+    strong2.appendChild(textNodes[3]);
+
+    let link1 = document.createElement("a");
+    let link2 = document.createElement("a");
+
+    link1.href = "http://fr.wikipedia.org/wiki/Organisme_de_normalisation"
+    link1.title = "Organisme de normalisation";
+
+    link2.href = "http://fr.wikipedia.org/wiki/World_Wide_Web";
+    link2.title = "World Wide Web";
+
+    link1.appendChild(textNodes[5]);
+    link2.appendChild(textNodes[7]);
+
+    document.getElementById("output3").appendChild(Maindiv);
+    Maindiv.appendChild(textNodes[0]);
+    Maindiv.appendChild(strong);
+    Maindiv.appendChild(textNodes[2]);
+    Maindiv.appendChild(strong2);
+    Maindiv.appendChild(textNodes[4]);
+    Maindiv.appendChild(link1);
+    Maindiv.appendChild(textNodes[6]);
+    Maindiv.appendChild(link2);
+    Maindiv.appendChild(textNodes[8]);
+
+
+
+
+
 
     </script>
   </body>
