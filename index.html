@@ -25,6 +25,9 @@
     <h1>TP 2</h1>
     <div id="output4">
     </div>
+    <h1>TP 3</h1>
+    <div id="output5">
+    </div>
     <script>
     // Exercice 1
       document.querySelector("a").href = "https://www.youtube.com/.";
@@ -111,6 +114,22 @@
     ul.appendChild(li);
   }
   document.getElementById("output4").appendChild(ul);
+
+  // TP 3
+  let tp3 = document.createElement("div");
+  tp3.id = "divTP3";
+
+  let text = document.createElement("p");
+  document.getElementById("output5").appendChild(tp3);
+  tp3.appendChild(text);
+
+  let para2 = document.createTextNode("Langages basés sur ECMAScript");
+  text.appendChild(para2);
+
+  
+
+
+
 
 
     </script>
