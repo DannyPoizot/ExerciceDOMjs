@@ -84,29 +84,33 @@
 
   // TP 2
   let tp2 = document.createElement("div");
-
+  tp2.id = "TP2";
   let para = document.createElement("p");
 
 
   document.getElementById("output4").appendChild(tp2);
   tp2.appendChild(para);
 
-  let titre = [
-    document.createTextNode("Langages basés sur EMCAScript")
-  ]
-  para.appendChild(titre[0]);
+  let titre = document.createTextNode("Langages basés sur EMCAScript");
+
+  para.appendChild(titre);
 
   let list = [
     document.createTextNode("Javascript"),
     document.createTextNode("JScript"),
     document.createTextNode("ActionSCript"),
     document.createTextNode("EX4"),
-  ]
+  ];
 
-  for (list = 0, in, i++) {
-    document.getElementById("output4").appendChild(list[0]);
+  let ul = document.createElement("ul");
+  let li;
+
+  for (let i = 0; i < list.length; i++) {
+    li = document.createElement("li");
+    li.appendChild(list[i]);
+    ul.appendChild(li);
   }
-
+  document.getElementById("output4").appendChild(ul);
 
 
     </script>
